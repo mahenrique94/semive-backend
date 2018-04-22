@@ -1,8 +1,11 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person;
 
 import br.com.matheuscastiglioni.semivebackend.custom.CustomInstantDeserializer;
-import com.fasterxml.jackson.annotation.JsonProperty;
+import br.com.matheuscastiglioni.semivebackend.domain.person.document.PersonDocument;
+import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -13,12 +16,14 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "person")
+@Table(name = "persons")
+@DynamicInsert(value = true)
+@DynamicUpdate(value = true)
 public class Person implements Serializable {
 
     @Id
-    @GeneratedValue
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @NotNull
     @NotEmpty
     @Size(min = 0, max = 120)
@@ -46,15 +51,15 @@ public class Person implements Serializable {
         setDateCreated(Instant.now());
         setDateUpdated(Instant.now());
     }
-    public Person(Integer id) {
+    public Person(Long id) {
         this();
         setId(id);
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getName() {

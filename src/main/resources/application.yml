@@ -1,15 +1,25 @@
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+                type: TRACE
+        springframework:
+            web: DEBUG
+
 server:
-  servlet:
-    context-path: /semive/api
+    port: ${SEMIVE_PORT:8080}
+    servlet:
+        context-path: ${SEMIVE_CONTEXT_API:/semive/api}
 
 spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        initialization-mode: always
+        password: ${SEMIVE_DATABASE_PASSWORD:root}
+        url: jdbc:mysql://${SEMIVE_DATABASE_URL:127.0.0.1}:${SEMIVE_DATABASE_PORT:3306}/${SEMIVE_DATABASE_NAME:semive}
+        username: ${SEMIVE_DATABASE_USERNAME:root}
     jpa:
         database: MYSQL
         hibernate:
-            ddl-auto: update
-
-    datasource:
-        url: jdbc:mysql://127.0.0.1:3306/semive
-        username: root
-        password: root
-        driver-class-name: com.mysql.jdbc.Driver
+            ddl-auto: create
