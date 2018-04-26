@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "persons_documents")
+@Table(name = "persons_documents", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_person", "id_type"})})
 @DynamicInsert(value = true)
 @DynamicUpdate(value = true)
 public class PersonDocument implements Serializable {
@@ -45,16 +45,7 @@ public class PersonDocument implements Serializable {
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
-    private Instant dateUpdate;
-
-    public PersonDocument() {
-        setDateCreated(Instant.now());
-        setDateUpdate(Instant.now());
-    }
-    public PersonDocument(Long id) {
-        this();
-        setId(id);
-    }
+    private Instant dateUpdated;
 
     public Long getId() {
         return id;
@@ -86,11 +77,22 @@ public class PersonDocument implements Serializable {
     public void setDateCreated(Instant dateCreated) {
         this.dateCreated = dateCreated;
     }
-    public Instant getDateUpdate() {
-        return dateUpdate;
+    public Instant getDateUpdated() {
+        return dateUpdated;
     }
-    public void setDateUpdate(Instant dateUpdate) {
-        this.dateUpdate = dateUpdate;
+    public void setDateUpdated(Instant dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+    @PrePersist
+    public void prePersist() {
+        setDateCreated(Instant.now());
+        setDateUpdated(Instant.now());
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        setDateUpdated(Instant.now());
     }
 
 }

@@ -15,11 +15,12 @@ server:
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
-        initialization-mode: always
         password: ${SEMIVE_DATABASE_PASSWORD:root}
         url: jdbc:mysql://${SEMIVE_DATABASE_URL:127.0.0.1}:${SEMIVE_DATABASE_PORT:3306}/${SEMIVE_DATABASE_NAME:semive}
         username: ${SEMIVE_DATABASE_USERNAME:root}
+    flyway:
+        baseline-on-migrate: true
     jpa:
         database: MYSQL
         hibernate:
-            ddl-auto: create
+            ddl-auto: none

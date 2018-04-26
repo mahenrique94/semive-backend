@@ -1,8 +1,6 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person;
 
 import br.com.matheuscastiglioni.semivebackend.custom.CustomInstantDeserializer;
-import br.com.matheuscastiglioni.semivebackend.domain.person.document.PersonDocument;
-import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -47,15 +45,6 @@ public class Person implements Serializable {
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
 
-    public Person() {
-        setDateCreated(Instant.now());
-        setDateUpdated(Instant.now());
-    }
-    public Person(Long id) {
-        this();
-        setId(id);
-    }
-
     public Long getId() {
         return id;
     }
@@ -91,6 +80,17 @@ public class Person implements Serializable {
     }
     public void setDateUpdated(Instant dateUpdated) {
         this.dateUpdated = dateUpdated;
+    }
+
+    @PrePersist
+    public void prePersist() {
+        setDateCreated(Instant.now());
+        setDateUpdated(Instant.now());
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        setDateUpdated(Instant.now());
     }
 
 }

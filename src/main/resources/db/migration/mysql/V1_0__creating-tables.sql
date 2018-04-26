@@ -1,0 +1,88 @@
+create table documents_types (
+    id integer not null auto_increment,
+    description varchar(30) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkdocuments_types primary key (id),
+    constraint ukdocuments_types01 unique (description)
+);
+
+
+
+create table persons (
+    id bigint not null auto_increment,
+    name varchar(120) not null,
+    sex char(1) not null,
+    date_born date not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkpersons primary key (id)
+);
+
+create table persons_addresses (
+    id bigint not null auto_increment,
+    id_person bigint not null,
+    type varchar (10) not null,
+    address varchar (60) not null,
+    number varchar (10) not null,
+    zipcode varchar (10) not null,
+    complement varchar (60),
+    district varchar (60) not null,
+    city varchar (60) not null,
+    state char (2) not null,
+    country varchar (30) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkpersons_addresses primary key (id),
+    constraint fkpersons_addresses01 foreign key (id_person) references persons (id),
+    constraint ukpersons_addresses01 unique (id_person, type, address, number, zipcode, district, city, country)
+);
+
+create table persons_contacts (
+    id bigint not null auto_increment,
+    id_person bigint not null,
+    name varchar(120) not null,
+    area_code integer,
+    telephone varchar(9),
+    cellphone varchar(10),
+    email varchar(255),
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkpersons_contacts primary key (id),
+    constraint fkpersons_contacts01 foreign key (id_person) references persons (id)
+);
+
+create table persons_documents (
+    id bigint not null auto_increment,
+    id_person bigint not null,
+    id_type integer not null,
+    value varchar(30) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkpersons_documents primary key (id),
+    constraint fkpersons_documents01 foreign key (id_person) references persons (id),
+    constraint fkpersons_documents02 foreign key (id_type) references documents_types (id),
+    constraint ukpersons_documents01 unique (id_person, id_type),
+    constraint ukpersons_documents02 unique (value)
+);
+
+create table persons_groups (
+    id integer not null auto_increment,
+    description varchar(30) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkpersons_groups primary key (id),
+    constraint ukpersons_groups01 unique (description)
+);
+
+create table persons_definitions (
+    id bigint not null auto_increment,
+    id_person bigint not null,
+    id_group integer not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkpersons_definitions primary key (id),
+    constraint fkpersons_definitions01 foreign key (id_person) references persons (id),
+    constraint fkpersons_definitions02 foreign key (id_group) references persons_groups (id),
+    constraint ukpersons_definitions01 unique (id_person, id_group)
+);

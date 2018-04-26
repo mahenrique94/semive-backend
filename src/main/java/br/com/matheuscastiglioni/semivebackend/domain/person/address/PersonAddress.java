@@ -83,16 +83,7 @@ public class PersonAddress implements Serializable {
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
-    private Instant dateUpdate;
-
-    public PersonAddress() {
-        setDateCreated(Instant.now());
-        setDateUpdate(Instant.now());
-    }
-    public PersonAddress(Long id) {
-        this();
-        setId(id);
-    }
+    private Instant dateUpdated;
 
     public Long getId() {
         return id;
@@ -166,11 +157,22 @@ public class PersonAddress implements Serializable {
     public void setDateCreated(Instant dateCreated) {
         this.dateCreated = dateCreated;
     }
-    public Instant getDateUpdate() {
-        return dateUpdate;
+    public Instant getDateUpdated() {
+        return dateUpdated;
     }
-    public void setDateUpdate(Instant dateUpdate) {
-        this.dateUpdate = dateUpdate;
+    public void setDateUpdated(Instant dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+    @PrePersist
+    public void prePersist() {
+        setDateCreated(Instant.now());
+        setDateUpdated(Instant.now());
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        setDateUpdated(Instant.now());
     }
 
 }

@@ -12,7 +12,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "persons_definitions")
+@Table(name = "persons_definitions", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_person", "id_group"})})
 @DynamicUpdate(value = true)
 @DynamicInsert(value = true)
 public class PersonDefinition implements Serializable {
@@ -27,23 +27,13 @@ public class PersonDefinition implements Serializable {
     @NotNull
     @OneToOne
     @JoinColumn(name = "id_group", nullable = false, referencedColumnName = "id")
-    @JsonBackReference
     private PersonGroup idGroup;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
-    private Instant dateUpdate;
-
-    public PersonDefinition() {
-        setDateCreated(Instant.now());
-        setDateUpdate(Instant.now());
-    }
-    public PersonDefinition(Long id) {
-        this();
-        setId(id);
-    }
+    private Instant dateUpdated;
 
     public Long getId() {
         return id;
@@ -69,11 +59,22 @@ public class PersonDefinition implements Serializable {
     public void setDateCreated(Instant dateCreated) {
         this.dateCreated = dateCreated;
     }
-    public Instant getDateUpdate() {
-        return dateUpdate;
+    public Instant getDateUpdated() {
+        return dateUpdated;
     }
-    public void setDateUpdate(Instant dateUpdate) {
-        this.dateUpdate = dateUpdate;
+    public void setDateUpdated(Instant dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+    @PrePersist
+    public void prePersist() {
+        setDateCreated(Instant.now());
+        setDateUpdated(Instant.now());
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+        setDateUpdated(Instant.now());
     }
 
 }
