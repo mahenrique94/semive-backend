@@ -1,4 +1,6 @@
-package br.com.matheuscastiglioni.semivebackend.domain.document;
+package br.com.matheuscastiglioni.semivebackend.domain.product.type;
+
+import br.com.matheuscastiglioni.semivebackend.domain.product.cattegory.ProductCattegory;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -9,17 +11,21 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "documents_types")
-public class DocumentType implements Serializable {
+@Table(name = "products_types", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_cattegory", "description"})})
+public class ProductType implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @NotNull
+    @OneToOne
+    @JoinColumn(name = "id_cattegory", nullable = false, referencedColumnName = "id")
+    private ProductCattegory idCattegory;
+    @NotNull
     @NotEmpty
     @Size(min = 0, max = 30)
-    @Pattern(message = "{pattern.letter}", regexp = "^([aA-zZ]*)$")
-    @Column(columnDefinition = "varchar(30)", length = 30, name = "description", nullable = false, unique = true)
+    @Pattern(message = "{pattern.spaceLetterNumber}", regexp = "^(([aA-zZ\\d])+(\\s[aA-zZ\\d]+)*)$")
+    @Column(columnDefinition = "varchar(30)", length = 30, name = "description", nullable = false)
     private String description;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
@@ -28,8 +34,8 @@ public class DocumentType implements Serializable {
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
 
-    public DocumentType() {}
-    public DocumentType(Integer id) {
+    public ProductType() {}
+    public ProductType(Integer id) {
         this();
         setId(id);
     }
@@ -39,6 +45,12 @@ public class DocumentType implements Serializable {
     }
     public void setId(Integer id) {
         this.id = id;
+    }
+    public ProductCattegory getIdCattegory() {
+        return idCattegory;
+    }
+    public void setIdCattegory(ProductCattegory idCattegory) {
+        this.idCattegory = idCattegory;
     }
     public String getDescription() {
         return description;

@@ -7,6 +7,17 @@ create table documents_types (
     constraint ukdocuments_types01 unique (description)
 );
 
+create table unities (
+    id integer not null auto_increment,
+    description varchar(30) not null,
+    unity char(2) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkunities primary key (id),
+    constraint ukunities01 unique (description),
+    constraint ukunities02 unique (unity)
+);
+
 
 
 create table persons (
@@ -85,4 +96,64 @@ create table persons_definitions (
     constraint fkpersons_definitions01 foreign key (id_person) references persons (id),
     constraint fkpersons_definitions02 foreign key (id_group) references persons_groups (id),
     constraint ukpersons_definitions01 unique (id_person, id_group)
+);
+
+
+
+create table products_cattegories (
+    id bigint not null auto_increment,
+    description varchar(30) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkproducts_cattegories primary key (id),
+    constraint ukproducts_cattegories01 unique (description)
+);
+
+create table products_types (
+    id bigint not null auto_increment,
+    id_cattegory bigint not null,
+    description varchar(30) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkproducts_types primary key (id),
+    constraint fkproducts_types01 foreign key (id_cattegory) references products_cattegories (id),
+    constraint ukproducts_types01 unique (id_cattegory, description)
+);
+
+create table products (
+    id bigint not null auto_increment,
+    id_type bigint not null,
+    id_unity integer not null,
+    description varchar(120) not null,
+    brand varchar(30),
+    bar_code varchar(30),
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkproducts primary key (id),
+    constraint fkproducts01 foreign key (id_type) references products_types (id),
+    constraint fkproducts02 foreign key (id_unity) references unities (id),
+    constraint ukproducts01 unique (description),
+    constraint ukproducts02 unique (bar_code)
+);
+
+create table products_stocks (
+    id bigint not null auto_increment,
+    id_product bigint not null,
+    count numeric(18, 2) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkproducts_stocks primary key (id),
+    constraint fkproducts_stocks01 foreign key (id_product) references products (id),
+    constraint ckproducts_stocks01 check (count >= 0)
+);
+
+create table products_values (
+    id bigint not null auto_increment,
+    id_product bigint not null,
+    value numeric(18, 2) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkproducts_values primary key (id),
+    constraint fkproducts_values01 foreign key (id_product) references products (id),
+    constraint ckproducts_values01 check (value >= 0)
 );

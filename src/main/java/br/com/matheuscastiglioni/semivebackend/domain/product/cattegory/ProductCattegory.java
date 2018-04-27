@@ -1,4 +1,4 @@
-package br.com.matheuscastiglioni.semivebackend.domain.document;
+package br.com.matheuscastiglioni.semivebackend.domain.product.cattegory;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -9,8 +9,8 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "documents_types")
-public class DocumentType implements Serializable {
+@Table(name = "products_cattegories")
+public class ProductCattegory implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class DocumentType implements Serializable {
     @NotNull
     @NotEmpty
     @Size(min = 0, max = 30)
-    @Pattern(message = "{pattern.letter}", regexp = "^([aA-zZ]*)$")
+    @Pattern(message = "{pattern.spaceLetterNumber}", regexp = "^(([aA-zZ\\d])+(\\s[aA-zZ\\d]+)*)$")
     @Column(columnDefinition = "varchar(30)", length = 30, name = "description", nullable = false, unique = true)
     private String description;
     @NotNull
@@ -28,8 +28,8 @@ public class DocumentType implements Serializable {
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
 
-    public DocumentType() {}
-    public DocumentType(Integer id) {
+    public ProductCattegory() {}
+    public ProductCattegory(Integer id) {
         this();
         setId(id);
     }

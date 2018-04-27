@@ -1,9 +1,6 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person.address;
 
 import br.com.matheuscastiglioni.semivebackend.domain.person.Person;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -15,8 +12,6 @@ import java.time.Instant;
 
 @Entity
 @Table(name = "persons_addresses", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_person", "type", "address", "number", "zipcode", "district", "city", "country"})})
-@DynamicInsert(value = true)
-@DynamicUpdate(value = true)
 public class PersonAddress implements Serializable {
 
     @Id
@@ -84,6 +79,12 @@ public class PersonAddress implements Serializable {
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
+
+    public PersonAddress() {}
+    public PersonAddress(Long id) {
+        this();
+        setId(id);
+    }
 
     public Long getId() {
         return id;
