@@ -1,10 +1,8 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person;
 
 import br.com.matheuscastiglioni.semivebackend.custom.CustomInstantDeserializer;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -15,8 +13,6 @@ import java.time.Instant;
 
 @Entity
 @Table(name = "persons")
-@DynamicInsert(value = true)
-@DynamicUpdate(value = true)
 public class Person implements Serializable {
 
     @Id
@@ -44,6 +40,12 @@ public class Person implements Serializable {
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
+
+    public Person() {}
+    public Person(Long id) {
+        this();
+        setId(id);
+    }
 
     public Long getId() {
         return id;

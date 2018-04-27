@@ -1,8 +1,5 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person.group;
 
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -13,8 +10,6 @@ import java.time.Instant;
 
 @Entity
 @Table(name = "persons_groups")
-@DynamicUpdate(value = true)
-@DynamicInsert(value = true)
 public class PersonGroup implements Serializable {
 
     @Id
@@ -32,6 +27,12 @@ public class PersonGroup implements Serializable {
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
+
+    public PersonGroup() {}
+    public PersonGroup(Integer id) {
+        this();
+        setId(id);
+    }
 
     public Integer getId() {
         return id;

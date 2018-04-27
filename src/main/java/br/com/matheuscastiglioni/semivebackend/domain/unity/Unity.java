@@ -1,4 +1,4 @@
-package br.com.matheuscastiglioni.semivebackend.domain.document;
+package br.com.matheuscastiglioni.semivebackend.domain.unity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -9,8 +9,8 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "documents_types")
-public class DocumentType implements Serializable {
+@Table(name = "unities")
+public class Unity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,14 +22,20 @@ public class DocumentType implements Serializable {
     @Column(columnDefinition = "varchar(30)", length = 30, name = "description", nullable = false, unique = true)
     private String description;
     @NotNull
+    @NotEmpty
+    @Size(min = 2, max = 2)
+    @Pattern(message = "{pattern.unity}", regexp = "^(([C][M])|([C])|([M][M])|([B][G])|([B][O])|([C][X])|([F][D])|([G][R])|([J][G])|([K][G])|([L][T])|([P][C])|([P][A])|([P][R])|([P][T])|([R][E])|([S][K])|([T][O])|([U][N])|([G]))$")
+    @Column(columnDefinition = "char(2)", length = 2, name = "unity", nullable = false, unique = true)
+    private String unity;
+    @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
 
-    public DocumentType() {}
-    public DocumentType(Integer id) {
+    public Unity() {}
+    public Unity(Integer id) {
         this();
         setId(id);
     }
@@ -45,6 +51,12 @@ public class DocumentType implements Serializable {
     }
     public void setDescription(String description) {
         this.description = description;
+    }
+    public String getUnity() {
+        return unity;
+    }
+    public void setUnity(String unity) {
+        this.unity = unity;
     }
     public Instant getDateCreated() {
         return dateCreated;

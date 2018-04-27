@@ -2,9 +2,6 @@ package br.com.matheuscastiglioni.semivebackend.domain.person.definition;
 
 import br.com.matheuscastiglioni.semivebackend.domain.person.Person;
 import br.com.matheuscastiglioni.semivebackend.domain.person.group.PersonGroup;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.hibernate.annotations.DynamicInsert;
-import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,8 +10,6 @@ import java.time.Instant;
 
 @Entity
 @Table(name = "persons_definitions", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_person", "id_group"})})
-@DynamicUpdate(value = true)
-@DynamicInsert(value = true)
 public class PersonDefinition implements Serializable {
 
     @Id
@@ -34,6 +29,12 @@ public class PersonDefinition implements Serializable {
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
+
+    public PersonDefinition() {}
+    public PersonDefinition(Long id) {
+        this();
+        setId(id);
+    }
 
     public Long getId() {
         return id;
