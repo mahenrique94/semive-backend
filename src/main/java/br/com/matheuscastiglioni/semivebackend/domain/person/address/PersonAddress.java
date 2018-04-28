@@ -1,5 +1,7 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person.address;
 
+import br.com.matheuscastiglioni.semivebackend.domain.address.type.AddressType;
+import br.com.matheuscastiglioni.semivebackend.domain.city.City;
 import br.com.matheuscastiglioni.semivebackend.domain.person.Person;
 
 import javax.persistence.*;
@@ -11,7 +13,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "persons_addresses", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_person", "type", "address", "number", "zipcode", "district", "city", "country"})})
+@Table(name = "persons_addresses", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_person", "id_city", "id_type", "address", "number", "zipcode", "district"})})
 public class PersonAddress implements Serializable {
 
     @Id
@@ -22,11 +24,13 @@ public class PersonAddress implements Serializable {
     @JoinColumn(name = "id_person", nullable = false, referencedColumnName = "id")
     private Person idPerson;
     @NotNull
-    @NotEmpty
-    @Size(min = 0, max = 10)
-    @Pattern(message = "{pattern.letter}", regexp = "^([aA-zZ]*)$")
-    @Column(columnDefinition = "varchar(10)", length = 10, name = "type", nullable = false)
-    private String type;
+    @OneToOne
+    @JoinColumn(name = "id_city", nullable = false, referencedColumnName = "id")
+    private City idCity;
+    @NotNull
+    @OneToOne
+    @JoinColumn(name = "id_type", nullable = false, referencedColumnName = "id")
+    private AddressType idType;
     @NotNull
     @NotEmpty
     @Size(min = 0, max = 60)
@@ -44,7 +48,7 @@ public class PersonAddress implements Serializable {
     @Size(min = 0, max = 10)
     @Pattern(message = "{pattern.addressNumber}", regexp = "^(([\\d]){5}([\\-])([\\d]{3}))$")
     @Column(columnDefinition = "varchar(10)", length = 10, name = "zipcode", nullable = false)
-    private String zipcode;
+    private String zipCode;
     @Size(min = 0, max = 30)
     @Pattern(message = "{pattern.spaceLetterNumberBarDotDashComma}", regexp = "^(([aA-zZ\\d\\.\\/\\-,])+(\\s[aA-zZ\\d\\.\\/\\-,]+)*)$")
     @Column(columnDefinition = "varchar(60)", length = 30, name = "complement", nullable = true)
@@ -55,24 +59,6 @@ public class PersonAddress implements Serializable {
     @Pattern(message = "{pattern.spaceLetterNumberDot}", regexp = "^(([aA-zZ\\d\\.])+(\\s[aA-zZ\\d\\.]+)*)$")
     @Column(columnDefinition = "varchar(60)", length = 60, name = "district", nullable = false)
     private String district;
-    @NotNull
-    @NotEmpty
-    @Size(min = 0, max = 60)
-    @Pattern(message = "{pattern.city}", regexp = "^(([aA-zZ\\'])+(\\s[aA-zZ\\']+)*)$")
-    @Column(columnDefinition = "varchar(60)", length = 60, name = "city", nullable = false)
-    private String city;
-    @NotNull
-    @NotEmpty
-    @Size(min = 2, max = 2)
-    @Pattern(message = "{pattern.state}", regexp = "^([AC|AL|AP|AM|BA|CE|DF|ES|GO|MA|MT|MS|MG|PA|PB|PR|PE|PI|RJ|RN|RS|RO|RR|SC|SP|SE|TO|EX]{2})$")
-    @Column(columnDefinition = "char(2)", length = 2, name = "state", nullable = false)
-    private String state;
-    @NotNull
-    @NotEmpty
-    @Size(min = 0, max = 30)
-    @Pattern(message = "{pattern.spaceLetter}", regexp = "^(([aA-zZ])+(\\s[aA-zZ]+)*)$")
-    @Column(columnDefinition = "varchar(30)", length = 30, name = "country", nullable = false)
-    private String country;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
@@ -98,11 +84,11 @@ public class PersonAddress implements Serializable {
     public void setIdPerson(Person idPerson) {
         this.idPerson = idPerson;
     }
-    public String getType() {
-        return type;
+    public AddressType getIdType() {
+        return idType;
     }
-    public void setType(String type) {
-        this.type = type;
+    public void setIdType(AddressType idType) {
+        this.idType = idType;
     }
     public String getAddress() {
         return address;
@@ -116,11 +102,11 @@ public class PersonAddress implements Serializable {
     public void setNumber(String number) {
         this.number = number;
     }
-    public String getZipcode() {
-        return zipcode;
+    public String getZipCode() {
+        return zipCode;
     }
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
     public String getComplement() {
         return complement;
@@ -134,23 +120,11 @@ public class PersonAddress implements Serializable {
     public void setDistrict(String district) {
         this.district = district;
     }
-    public String getCity() {
-        return city;
+    public City getIdCity() {
+        return idCity;
     }
-    public void setCity(String city) {
-        this.city = city;
-    }
-    public String getState() {
-        return state;
-    }
-    public void setState(String state) {
-        this.state = state;
-    }
-    public String getCountry() {
-        return country;
-    }
-    public void setCountry(String country) {
-        this.country = country;
+    public void setIdCity(City idCity) {
+        this.idCity = idCity;
     }
     public Instant getDateCreated() {
         return dateCreated;

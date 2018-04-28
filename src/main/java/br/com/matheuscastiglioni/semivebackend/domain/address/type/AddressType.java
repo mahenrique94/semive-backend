@@ -1,4 +1,4 @@
-package br.com.matheuscastiglioni.semivebackend.domain.document;
+package br.com.matheuscastiglioni.semivebackend.domain.address.type;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -9,8 +9,8 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "documents_types")
-public class DocumentType implements Serializable {
+@Table(name = "addresses_types")
+public class AddressType implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,8 +28,8 @@ public class DocumentType implements Serializable {
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
 
-    public DocumentType() {}
-    public DocumentType(Integer id) {
+    public AddressType() {}
+    public AddressType(Integer id) {
         this();
         setId(id);
     }

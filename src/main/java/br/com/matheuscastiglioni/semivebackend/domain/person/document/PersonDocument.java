@@ -1,6 +1,6 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person.document;
 
-import br.com.matheuscastiglioni.semivebackend.domain.document.DocumentType;
+import br.com.matheuscastiglioni.semivebackend.domain.document.type.DocumentType;
 import br.com.matheuscastiglioni.semivebackend.domain.person.Person;
 
 import javax.persistence.*;

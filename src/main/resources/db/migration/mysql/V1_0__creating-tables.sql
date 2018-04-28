@@ -1,3 +1,21 @@
+create table addresses_types (
+    id integer not null auto_increment,
+    description varchar(30) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkaddress_types primary key (id),
+    constraint ukaddress_types01 unique (description)
+);
+
+create table countries (
+    id integer not null,
+    description varchar(30) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkcontries primary key (id),
+    constraint ukcontries01 unique (description)
+);
+
 create table documents_types (
     id integer not null auto_increment,
     description varchar(30) not null,
@@ -5,6 +23,29 @@ create table documents_types (
     date_updated timestamp not null,
     constraint pkdocuments_types primary key (id),
     constraint ukdocuments_types01 unique (description)
+);
+
+create table states (
+    id integer not null,
+    id_country integer not null,
+    description varchar(30) not null,
+    state char(2) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkstates primary key (id),
+    constraint fkstates01 foreign key (id_country) references countries (id),
+    constraint ukstates01 unique (description),
+    constraint ukstates02 unique (state)
+);
+
+create table cities (
+    id integer not null,
+    id_state integer not null,
+    description varchar(60) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkstates primary key (id),
+    constraint fkcities01 foreign key (id_state) references states (id)
 );
 
 create table unities (
@@ -33,20 +74,20 @@ create table persons (
 create table persons_addresses (
     id bigint not null auto_increment,
     id_person bigint not null,
-    type varchar (10) not null,
+    id_city integer not null,
+    id_type integer not null,
     address varchar (60) not null,
     number varchar (10) not null,
     zipcode varchar (10) not null,
     complement varchar (60),
     district varchar (60) not null,
-    city varchar (60) not null,
-    state char (2) not null,
-    country varchar (30) not null,
     date_created timestamp not null,
     date_updated timestamp not null,
     constraint pkpersons_addresses primary key (id),
     constraint fkpersons_addresses01 foreign key (id_person) references persons (id),
-    constraint ukpersons_addresses01 unique (id_person, type, address, number, zipcode, district, city, country)
+    constraint fkpersons_addresses02 foreign key (id_city) references cities (id),
+    constraint fkpersons_addresses03 foreign key (id_type) references addresses_types (id),
+    constraint ukpersons_addresses01 unique (id_person, id_city, id_type, address, number, zipcode, district)
 );
 
 create table persons_contacts (
