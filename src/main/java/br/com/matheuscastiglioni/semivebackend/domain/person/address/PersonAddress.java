@@ -1,5 +1,6 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person.address;
 
+import br.com.matheuscastiglioni.semivebackend.domain.address.type.AddressType;
 import br.com.matheuscastiglioni.semivebackend.domain.city.City;
 import br.com.matheuscastiglioni.semivebackend.domain.person.Person;
 
@@ -12,7 +13,7 @@ import java.io.Serializable;
 import java.time.Instant;
 
 @Entity
-@Table(name = "persons_addresses", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_person", "id_city", "type", "address", "number", "zipcode", "district"})})
+@Table(name = "persons_addresses", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_person", "id_city", "id_type", "address", "number", "zipcode", "district"})})
 public class PersonAddress implements Serializable {
 
     @Id
@@ -27,11 +28,9 @@ public class PersonAddress implements Serializable {
     @JoinColumn(name = "id_city", nullable = false, referencedColumnName = "id")
     private City idCity;
     @NotNull
-    @NotEmpty
-    @Size(min = 0, max = 10)
-    @Pattern(message = "{pattern.letter}", regexp = "^([aA-zZ]*)$")
-    @Column(columnDefinition = "varchar(10)", length = 10, name = "type", nullable = false)
-    private String type;
+    @OneToOne
+    @JoinColumn(name = "id_type", nullable = false, referencedColumnName = "id")
+    private AddressType idType;
     @NotNull
     @NotEmpty
     @Size(min = 0, max = 60)
@@ -85,11 +84,11 @@ public class PersonAddress implements Serializable {
     public void setIdPerson(Person idPerson) {
         this.idPerson = idPerson;
     }
-    public String getType() {
-        return type;
+    public AddressType getIdType() {
+        return idType;
     }
-    public void setType(String type) {
-        this.type = type;
+    public void setIdType(AddressType idType) {
+        this.idType = idType;
     }
     public String getAddress() {
         return address;

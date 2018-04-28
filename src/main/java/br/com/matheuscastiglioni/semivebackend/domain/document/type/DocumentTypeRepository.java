@@ -1,4 +1,4 @@
-package br.com.matheuscastiglioni.semivebackend.domain.document;
+package br.com.matheuscastiglioni.semivebackend.domain.document.type;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

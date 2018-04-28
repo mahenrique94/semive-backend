@@ -1,3 +1,10 @@
+insert into addresses_types(id, description, date_created, date_updated) values (1, 'Residencia', current_timestamp, current_timestamp);
+insert into addresses_types(id, description, date_created, date_updated) values (2, 'Recado', current_timestamp, current_timestamp);
+insert into addresses_types(id, description, date_created, date_updated) values (3, 'Entrega', current_timestamp, current_timestamp);
+insert into addresses_types(id, description, date_created, date_updated) values (4, 'Trabalho', current_timestamp, current_timestamp);
+
+
+
 insert into documents_types(id, description, date_created, date_updated) values (1, 'CPF', current_timestamp, current_timestamp);
 insert into documents_types(id, description, date_created, date_updated) values (2, 'RG', current_timestamp, current_timestamp);
 

@@ -1,4 +1,4 @@
-package br.com.matheuscastiglioni.semivebackend.domain.document;
+package br.com.matheuscastiglioni.semivebackend.domain.document.type;
 
 import br.com.matheuscastiglioni.semivebackend.generic.GenericService;
 import org.springframework.stereotype.Service;
