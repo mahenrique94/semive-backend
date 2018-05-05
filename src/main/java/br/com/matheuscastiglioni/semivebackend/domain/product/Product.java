@@ -35,14 +35,10 @@ public class Product implements Serializable {
     @Pattern(message = "{pattern.spaceLetterNumberBarCommaDashDot}", regexp = "^(([aA-zZ\\d\\.\\/\\-,])+(\\s[aA-zZ\\d\\.\\/\\-,]+)*)$")
     @Column(columnDefinition = "varchar(120)", length = 120, name = "description", nullable = false, unique = true)
     private String description;
-    @NotNull
-    @NotEmpty
     @Size(min = 0, max = 30)
     @Pattern(message = "{pattern.spaceLetterNumber}", regexp = "^(([aA-zZ\\d])+(\\s[aA-zZ\\d]+)*)$")
     @Column(columnDefinition = "varchar(30)", length = 30, name = "brand", nullable = true)
     private String brand;
-    @NotNull
-    @NotEmpty
     @Size(min = 0, max = 30)
     @Pattern(message = "{pattern.letterNumber}", regexp = "^([aA-zZ\\d]+)$")
     @Column(columnDefinition = "varchar(30)", length = 30, name = "bar_code", nullable = true, unique = true)

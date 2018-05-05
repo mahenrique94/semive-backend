@@ -198,3 +198,36 @@ create table products_values (
     constraint fkproducts_values01 foreign key (id_product) references products (id),
     constraint ckproducts_values01 check (value >= 0)
 );
+
+
+
+create table orders (
+    id bigint not null auto_increment,
+    id_person bigint not null,
+    date_delivery date not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkorders primary key (id),
+    constraint fkorders01 foreign key (id_person) references persons (id)
+);
+
+create table orders_items (
+    id bigint not null auto_increment,
+    id_order bigint not null,
+    id_product bigint not null,
+    count numeric(18, 2) not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkorders_items primary key (id),
+    constraint fkorders_items01 foreign key (id_order) references orders (id),
+    constraint fkorders_items02 foreign key (id_product) references products (id)
+);
+
+create table orders_values (
+    id bigint not null auto_increment,
+    id_order bigint not null,
+    date_created timestamp not null,
+    date_updated timestamp not null,
+    constraint pkorders_values primary key (id),
+    constraint fkorders_values01 foreign key (id_order) references orders (id)
+);
