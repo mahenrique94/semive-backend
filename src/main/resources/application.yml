@@ -7,6 +7,10 @@ logging:
         springframework:
             web: DEBUG
 
+semive:
+    cors:
+        allowed: ${SEMIVE_CORS:*}
+
 server:
     port: ${SEMIVE_PORT:9090}
     servlet:
