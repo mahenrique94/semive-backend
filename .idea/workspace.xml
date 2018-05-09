@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cd9d4a4-7a1b-4f60-ba27-850add6c9a84" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_atteo_evo_inflector_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_rest_2_0_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_0_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_rest_core_3_0_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_rest_webmvc_3_0_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_0_24_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_0_4_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/mock/MockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/mock/MockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/semive-backend-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/semive-backend-1.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/semive-backend-1.0.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/semive-backend-1.0.0.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semive-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/semive-backend.iml" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,12 +53,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="docker-compose.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SwaggerConfig.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/SwaggerConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+            <state relative-caret-position="225">
+              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -101,7 +96,6 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/SemiveBackendApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/PersonController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/MockController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/mock/MockController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/Person.java" />
@@ -116,10 +110,12 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/mock/MockService.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/docker-entrypoint.sh" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/SwaggerConfig.java" />
       </list>
     </option>
   </component>
@@ -146,6 +142,59 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="semivebackend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="semivebackend" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
@@ -186,17 +235,6 @@
               <item name="src" type="cbb8eebc:String" user="src" />
               <item name="main" type="cbb8eebc:String" user="main" />
               <item name="resources" type="cbb8eebc:String" user="resources" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,12 +339,13 @@
       <workItem from="1525743223642" duration="129000" />
       <workItem from="1525743355562" duration="3645000" />
       <workItem from="1525815541568" duration="8980000" />
-      <workItem from="1525825136835" duration="24000" />
+      <workItem from="1525825136835" duration="2675000" />
+      <workItem from="1525871718093" duration="257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12785000" />
+    <option name="totallyTimeSpent" value="15693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -328,11 +367,11 @@
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32941177" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657512" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26979" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
@@ -597,30 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="42" column="34" lean-forward="true" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docker-entrypoint.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -637,8 +652,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker-compose.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="42" column="33" lean-forward="true" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+        <state relative-caret-position="210">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
         </state>
       </provider>
     </entry>
