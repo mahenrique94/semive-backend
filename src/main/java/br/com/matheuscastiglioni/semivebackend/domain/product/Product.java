@@ -61,6 +61,12 @@ public class Product implements Serializable {
         this();
         setId(id);
     }
+    public Product(ProductType idType, Unity idUnity, String description, String brand) {
+        this.idType = idType;
+        this.idUnity = idUnity;
+        this.description = description;
+        this.brand = brand;
+    }
 
     public Long getId() {
         return id;

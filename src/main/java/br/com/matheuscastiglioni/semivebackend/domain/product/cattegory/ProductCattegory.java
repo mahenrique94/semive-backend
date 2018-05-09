@@ -33,6 +33,9 @@ public class ProductCattegory implements Serializable {
         this();
         setId(id);
     }
+    public ProductCattegory(String description) {
+        this.description = description;
+    }
 
     public Integer getId() {
         return id;

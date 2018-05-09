@@ -71,6 +71,15 @@ public class PersonAddress implements Serializable {
         this();
         setId(id);
     }
+    public PersonAddress(Person idPerson, City idCity, AddressType idType, String address, String number, String zipCode, String district) {
+        this.idPerson = idPerson;
+        this.idCity = idCity;
+        this.idType = idType;
+        this.address = address;
+        this.number = number;
+        this.zipCode = zipCode;
+        this.district = district;
+    }
 
     public Long getId() {
         return id;

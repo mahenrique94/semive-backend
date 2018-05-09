@@ -44,6 +44,11 @@ public class PersonDocument implements Serializable {
         this();
         setId(id);
     }
+    public PersonDocument(Person idPerson, DocumentType idType, String value) {
+        this.idPerson = idPerson;
+        this.idType = idType;
+        this.value = value;
+    }
 
     public Long getId() {
         return id;

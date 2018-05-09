@@ -2,6 +2,7 @@ br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItemController.cl
 br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressTypeRepository.class
 br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressType.class
 br/com/matheuscastiglioni/semivebackend/domain/order/OrderController.class
+br/com/matheuscastiglioni/semivebackend/domain/mock/MockController.class
 br/com/matheuscastiglioni/semivebackend/domain/product/ProductController.class
 br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItem.class
 br/com/matheuscastiglioni/semivebackend/generic/GenericController.class
@@ -69,11 +70,13 @@ br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroupService.c
 br/com/matheuscastiglioni/semivebackend/domain/unity/Unity.class
 br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddressService.class
 br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.class
+br/com/matheuscastiglioni/semivebackend/domain/mock/MockService.class
 br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.class
 br/com/matheuscastiglioni/semivebackend/domain/product/stock/ProductStock.class
 br/com/matheuscastiglioni/semivebackend/domain/order/value/OrderValue.class
 br/com/matheuscastiglioni/semivebackend/domain/unity/UnityService.class
 br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentTypeRepository.class
+br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.class
 br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinitionRepository.class
 br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItemService.class
 br/com/matheuscastiglioni/semivebackend/domain/city/CityRepository.class

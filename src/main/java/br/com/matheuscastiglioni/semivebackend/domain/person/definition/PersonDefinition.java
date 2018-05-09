@@ -35,6 +35,10 @@ public class PersonDefinition implements Serializable {
         this();
         setId(id);
     }
+    public PersonDefinition(Person idPerson, PersonGroup idGroup) {
+        this.idPerson = idPerson;
+        this.idGroup = idGroup;
+    }
 
     public Long getId() {
         return id;

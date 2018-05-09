@@ -31,11 +31,14 @@ public class Order implements Serializable {
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
     private Instant dateUpdated;
 
-    public Order() {
-    }
+    public Order() {}
     public Order(Long id) {
         this();
         setId(id);
+    }
+    public Order(Person idPerson, Instant dateDelivery) {
+        this.idPerson = idPerson;
+        this.dateDelivery = dateDelivery;
     }
 
     public Long getId() {
