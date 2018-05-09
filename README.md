@@ -1,7 +1,7 @@
 # semive-backend
-Projeto para controle de clientes, fornecedores, produtos e pedidos feito para a faculdade.
+Projeto para controle de clientes, fornecedores, produtos e pedidos, feito para a faculdade.
 
-Tecnologidas:
+Tecnologias:
 
 - Java 10
 - Spring
