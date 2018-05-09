@@ -45,6 +45,11 @@ public class OrderItem implements Serializable {
         this();
         setId(id);
     }
+    public OrderItem(Order idOrder, Product idProduct, BigDecimal count) {
+        this.idOrder = idOrder;
+        this.idProduct = idProduct;
+        this.count = count;
+    }
 
     public Long getId() {
         return id;

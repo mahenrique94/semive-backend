@@ -39,6 +39,10 @@ public class ProductType implements Serializable {
         this();
         setId(id);
     }
+    public ProductType(ProductCattegory idCattegory, String description) {
+        this.idCattegory = idCattegory;
+        this.description = description;
+    }
 
     public Integer getId() {
         return id;

@@ -55,6 +55,11 @@ public class PersonContact implements Serializable {
         this();
         setId(id);
     }
+    public PersonContact(Person idPerson, String name, String email) {
+        this.idPerson = idPerson;
+        this.name = name;
+        this.email = email;
+    }
 
     public Long getId() {
         return id;
