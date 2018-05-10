@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cd9d4a4-7a1b-4f60-ba27-850add6c9a84" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/custom/CustomInstantDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/custom/BrazilianInstantDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/city/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/city/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/country/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/country/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/value/OrderValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/value/OrderValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/stock/ProductStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/stock/ProductStock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/value/ProductValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/value/ProductValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/state/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/state/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/unity/Unity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/unity/Unity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semive-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/semive-backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/SwaggerConfig.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +70,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/SemiveBackendApplication.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/generic/GenericController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/CORSConfiguration.java" />
@@ -113,6 +95,7 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/unity/Unity.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/state/State.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -156,6 +139,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
@@ -202,17 +196,6 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,6 +213,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -309,11 +293,12 @@
       <workItem from="1525743223642" duration="129000" />
       <workItem from="1525908001692" duration="3584000" />
       <workItem from="1525913970873" duration="2415000" />
+      <workItem from="1525995422874" duration="83000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6171000" />
+    <option name="totallyTimeSpent" value="6254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -330,16 +315,16 @@
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32941177" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32941177" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2657512" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
@@ -395,13 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/generic/GenericController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -437,16 +415,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker-entrypoint.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/custom/BrazilianInstantDeserializer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-          <folding>
-            <element signature="method#hasData#0;class#BrazilianInstantDeserializer#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -454,9 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -597,6 +566,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="42" column="60" selection-start-line="42" selection-start-column="60" selection-end-line="42" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
         </state>
       </provider>
     </entry>
