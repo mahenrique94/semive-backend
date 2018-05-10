@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin
 public abstract class GenericController<T, Service extends CRUDService, PK> implements CRUDController<T, PK> {
 
     private final Service service;
