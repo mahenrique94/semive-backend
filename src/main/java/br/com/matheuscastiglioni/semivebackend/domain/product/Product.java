@@ -44,6 +44,9 @@ public class Product implements Serializable {
     @Column(columnDefinition = "varchar(30)", length = 30, name = "bar_code", nullable = true, unique = true)
     private String barCode;
     @NotNull
+    @Column(columnDefinition = "boolean", name = "active", nullable = false)
+    private Boolean active;
+    @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
     @NotNull
@@ -104,6 +107,12 @@ public class Product implements Serializable {
     public void setBarCode(String barCode) {
         this.barCode = barCode;
     }
+    public Boolean getActive() {
+        return active;
+    }
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
     public Instant getDateCreated() {
         return dateCreated;
     }
@@ -125,6 +134,7 @@ public class Product implements Serializable {
 
     @PrePersist
     public void prePersist() {
+        setActive(true);
         setDateCreated(Instant.now());
         setDateUpdated(Instant.now());
     }

@@ -44,6 +44,9 @@ public class PersonContact implements Serializable {
     @Column(columnDefinition = "varchar(255)", length = 255, name = "email", nullable = true)
     private String email;
     @NotNull
+    @Column(columnDefinition = "boolean", name = "active", nullable = false)
+    private Boolean active;
+    @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
     @NotNull
@@ -103,6 +106,12 @@ public class PersonContact implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+    public Boolean getActive() {
+        return active;
+    }
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
     public Instant getDateCreated() {
         return dateCreated;
     }
@@ -118,6 +127,7 @@ public class PersonContact implements Serializable {
 
     @PrePersist
     public void prePersist() {
+        setActive(true);
         setDateCreated(Instant.now());
         setDateUpdated(Instant.now());
     }

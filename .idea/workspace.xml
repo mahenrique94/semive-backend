@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cd9d4a4-7a1b-4f60-ba27-850add6c9a84" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/generic/GenericController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/generic/GenericController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,28 +55,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CORSConfiguration.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/CORSConfiguration.java">
+      <file leaf-file-name="V1_1_1__bugfix-active-columns.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/mysql/V1_1_1__bugfix-active-columns.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#534#1036#0" expanded="true" />
-                <element signature="e#1035#1036#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebSecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java">
+      <file leaf-file-name="Product.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="420">
+              <caret line="136" column="24" lean-forward="true" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -100,6 +100,17 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/generic/GenericController.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/CORSConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" />
       </list>
     </option>
   </component>
@@ -143,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -187,6 +199,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,56 +207,10 @@
               <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="semivebackend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="semivebackend" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="semive-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="semive-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="semivebackend" type="462c0819:PsiDirectoryNode" />
-              <item name="generic" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -333,12 +300,13 @@
       <updated>1524227478131</updated>
       <workItem from="1524227479944" duration="1156000" />
       <workItem from="1525743223642" duration="129000" />
-      <workItem from="1525908001692" duration="3325000" />
+      <workItem from="1525908001692" duration="3584000" />
+      <workItem from="1525913970873" duration="458000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3497000" />
+    <option name="totallyTimeSpent" value="4214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -356,16 +324,15 @@
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32941177" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32941177" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32941177" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="4" />
@@ -375,6 +342,7 @@
       <window_info anchor="bottom" id="Database Console" order="9" weight="0.32941177" />
       <window_info anchor="bottom" id="SQL Generator" order="8" weight="0.32941177" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -387,7 +355,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentTypeController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentTypeService.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentTypeRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressTypeService.java" />
@@ -418,24 +385,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/mysql/V1_0_0__creating-tables.sql" />
     <entry file="das://dea00e98-3df1-4ede-ba8c-87244e4ad8cb/schema/semive/table/flyway_schema_history" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressType.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentType.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/Person.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/mysql/V1_1_1__bugfix-active-columns.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="62" lean-forward="true" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar!/org/springframework/context/annotation/Bean.class">
@@ -468,23 +417,106 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="40" column="54" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="271">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/config/CORSConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#534#1036#0" expanded="true" />
-            <element signature="e#1035#1036#0" expanded="true" />
-          </folding>
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2e56c11a-81f6-419c-a4f5-4dd3d26e9e62/schema/semive/table/persons">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="161" column="24" lean-forward="true" selection-start-line="161" selection-start-column="24" selection-end-line="161" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="129" column="22" selection-start-line="129" selection-start-column="22" selection-end-line="129" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="100" column="24" lean-forward="true" selection-start-line="100" selection-start-column="24" selection-end-line="100" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="102" column="22" selection-start-line="102" selection-start-column="22" selection-end-line="102" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/mysql/V1_1_1__bugfix-active-columns.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="88" column="22" selection-start-line="88" selection-start-column="22" selection-end-line="88" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="136" column="24" lean-forward="true" selection-start-line="136" selection-start-column="24" selection-end-line="136" selection-end-column="24" />
         </state>
       </provider>
     </entry>

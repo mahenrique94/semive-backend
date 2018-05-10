@@ -60,6 +60,9 @@ public class PersonAddress implements Serializable {
     @Column(columnDefinition = "varchar(60)", length = 60, name = "district", nullable = false)
     private String district;
     @NotNull
+    @Column(columnDefinition = "boolean", name = "active", nullable = false)
+    private Boolean active;
+    @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
     @NotNull
@@ -135,6 +138,12 @@ public class PersonAddress implements Serializable {
     public void setIdCity(City idCity) {
         this.idCity = idCity;
     }
+    public Boolean getActive() {
+        return active;
+    }
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
     public Instant getDateCreated() {
         return dateCreated;
     }
@@ -150,6 +159,7 @@ public class PersonAddress implements Serializable {
 
     @PrePersist
     public void prePersist() {
+        setActive(true);
         setDateCreated(Instant.now());
         setDateUpdated(Instant.now());
     }

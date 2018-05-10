@@ -24,6 +24,9 @@ public class PersonDefinition implements Serializable {
     @JoinColumn(name = "id_group", nullable = false, referencedColumnName = "id")
     private PersonGroup idGroup;
     @NotNull
+    @Column(columnDefinition = "boolean", name = "active", nullable = false)
+    private Boolean active;
+    @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
     @NotNull
@@ -58,6 +61,12 @@ public class PersonDefinition implements Serializable {
     public void setIdGroup(PersonGroup idGroup) {
         this.idGroup = idGroup;
     }
+    public Boolean getActive() {
+        return active;
+    }
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
     public Instant getDateCreated() {
         return dateCreated;
     }
@@ -73,6 +82,7 @@ public class PersonDefinition implements Serializable {
 
     @PrePersist
     public void prePersist() {
+        setActive(true);
         setDateCreated(Instant.now());
         setDateUpdated(Instant.now());
     }

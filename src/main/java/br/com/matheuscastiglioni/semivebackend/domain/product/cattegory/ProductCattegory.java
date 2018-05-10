@@ -22,6 +22,9 @@ public class ProductCattegory implements Serializable {
     @Column(columnDefinition = "varchar(30)", length = 30, name = "description", nullable = false, unique = true)
     private String description;
     @NotNull
+    @Column(columnDefinition = "boolean", name = "active", nullable = false)
+    private Boolean active;
+    @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
     @NotNull
@@ -49,6 +52,12 @@ public class ProductCattegory implements Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+    public Boolean getActive() {
+        return active;
+    }
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
     public Instant getDateCreated() {
         return dateCreated;
     }
@@ -64,6 +73,7 @@ public class ProductCattegory implements Serializable {
 
     @PrePersist
     public void prePersist() {
+        setActive(true);
         setDateCreated(Instant.now());
         setDateUpdated(Instant.now());
     }

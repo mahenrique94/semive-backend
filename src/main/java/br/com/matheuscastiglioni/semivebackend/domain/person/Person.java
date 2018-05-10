@@ -35,6 +35,9 @@ public class Person implements Serializable {
     @JsonDeserialize(using = CustomInstantDeserializer.class)
     private Instant dateBorn;
     @NotNull
+    @Column(columnDefinition = "boolean", name = "active", nullable = false)
+    private Boolean active;
+    @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
     private Instant dateCreated;
     @NotNull
@@ -76,6 +79,12 @@ public class Person implements Serializable {
     public void setDateBorn(Instant dateBorn) {
         this.dateBorn = dateBorn;
     }
+    public Boolean getActive() {
+        return active;
+    }
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
     public Instant getDateCreated() {
         return dateCreated;
     }
@@ -91,6 +100,7 @@ public class Person implements Serializable {
 
     @PrePersist
     public void prePersist() {
+        setActive(true);
         setDateCreated(Instant.now());
         setDateUpdated(Instant.now());
     }
