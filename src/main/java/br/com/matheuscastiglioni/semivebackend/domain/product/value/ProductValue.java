@@ -1,7 +1,9 @@
 package br.com.matheuscastiglioni.semivebackend.domain.product.value;
 
+import br.com.matheuscastiglioni.semivebackend.custom.BrazilianInstantSerializer;
 import br.com.matheuscastiglioni.semivebackend.domain.product.Product;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 import javax.validation.constraints.DecimalMax;
@@ -32,9 +34,11 @@ public class ProductValue implements Serializable {
     private BigDecimal value;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateUpdated;
 
     public ProductValue() {}

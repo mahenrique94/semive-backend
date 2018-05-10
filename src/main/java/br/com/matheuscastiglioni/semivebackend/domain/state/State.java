@@ -1,6 +1,8 @@
 package br.com.matheuscastiglioni.semivebackend.domain.state;
 
+import br.com.matheuscastiglioni.semivebackend.custom.BrazilianInstantSerializer;
 import br.com.matheuscastiglioni.semivebackend.domain.country.Country;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -34,9 +36,11 @@ public class State implements Serializable {
     private String state;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateUpdated;
 
     public State() {}

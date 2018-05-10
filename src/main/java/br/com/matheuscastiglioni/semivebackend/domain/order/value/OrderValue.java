@@ -1,7 +1,9 @@
 package br.com.matheuscastiglioni.semivebackend.domain.order.value;
 
+import br.com.matheuscastiglioni.semivebackend.custom.BrazilianInstantSerializer;
 import br.com.matheuscastiglioni.semivebackend.domain.order.Order;
 import br.com.matheuscastiglioni.semivebackend.domain.order.item.OrderItem;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.hibernate.annotations.Formula;
 
 import javax.persistence.*;
@@ -33,9 +35,11 @@ public class OrderValue implements Serializable {
     private BigDecimal total;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateUpdated;
     @OneToMany
     @JoinColumn(name = "id_order", nullable = false, referencedColumnName = "id_order", insertable = false, updatable = false)

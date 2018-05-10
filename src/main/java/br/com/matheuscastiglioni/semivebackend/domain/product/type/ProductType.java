@@ -1,6 +1,8 @@
 package br.com.matheuscastiglioni.semivebackend.domain.product.type;
 
+import br.com.matheuscastiglioni.semivebackend.custom.BrazilianInstantSerializer;
 import br.com.matheuscastiglioni.semivebackend.domain.product.cattegory.ProductCattegory;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -32,9 +34,11 @@ public class ProductType implements Serializable {
     private Boolean active;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateUpdated;
 
     public ProductType() {}

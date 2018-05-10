@@ -1,8 +1,10 @@
 package br.com.matheuscastiglioni.semivebackend.domain.order;
 
-import br.com.matheuscastiglioni.semivebackend.custom.CustomInstantDeserializer;
+import br.com.matheuscastiglioni.semivebackend.custom.BrazilianInstantDeserializer;
+import br.com.matheuscastiglioni.semivebackend.custom.BrazilianInstantSerializer;
 import br.com.matheuscastiglioni.semivebackend.domain.person.Person;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -22,13 +24,16 @@ public class Order implements Serializable {
     private Person idPerson;
     @NotNull
     @Column(columnDefinition = "date", name = "date_delivery", nullable = false)
-    @JsonDeserialize(using = CustomInstantDeserializer.class)
+    @JsonDeserialize(using = BrazilianInstantDeserializer.class)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateDelivery;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateUpdated;
 
     public Order() {}

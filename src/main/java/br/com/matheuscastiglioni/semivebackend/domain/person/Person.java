@@ -1,8 +1,11 @@
 package br.com.matheuscastiglioni.semivebackend.domain.person;
 
-import br.com.matheuscastiglioni.semivebackend.custom.CustomInstantDeserializer;
+import br.com.matheuscastiglioni.semivebackend.custom.BrazilianInstantDeserializer;
 
+import br.com.matheuscastiglioni.semivebackend.custom.BrazilianInstantSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -32,16 +35,19 @@ public class Person implements Serializable {
     private String sex;
     @NotNull
     @Column(columnDefinition = "date", name = "date_born", nullable = false)
-    @JsonDeserialize(using = CustomInstantDeserializer.class)
+    @JsonDeserialize(using = BrazilianInstantDeserializer.class)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateBorn;
     @NotNull
     @Column(columnDefinition = "boolean", name = "active", nullable = false)
     private Boolean active;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_created", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateCreated;
     @NotNull
     @Column(columnDefinition = "timestamp", name = "date_updated", nullable = false)
+    @JsonSerialize(using = BrazilianInstantSerializer.class)
     private Instant dateUpdated;
 
     public Person() {}

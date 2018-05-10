@@ -12,7 +12,7 @@ import java.time.Instant;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
 
-public class CustomInstantDeserializer extends JsonDeserializer<Instant> {
+public class BrazilianInstantDeserializer extends JsonDeserializer<Instant> {
 
     @Override
     public Instant deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) {
