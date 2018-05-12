@@ -23,7 +23,7 @@ services:
                     - mysql
         ports:
             - 3306:3306
-        restart: always
+        restart: "no"
 
     semive-backend:
         build: .
@@ -50,7 +50,7 @@ services:
                     - semive-backend
         ports:
             - 9090:9090
-        restart: always
+        restart: "no"
 
 networks:
     main:

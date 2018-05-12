@@ -57,6 +57,7 @@
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/value/OrderValueService.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/value/OrderValueRepository.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/OrderController.java
+/Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/custom/BrazilianInstantDeserializer.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/ProductService.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/stock/ProductStock.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroup.java
@@ -66,6 +67,7 @@
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/definition/PersonDefinitionRepository.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentTypeRepository.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/state/StateService.java
+/Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/config/CORSConfiguration.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegoryController.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/SemiveBackendApplication.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/mock/MockController.java
@@ -79,10 +81,10 @@
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/address/PersonAddressService.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroupController.java
-/Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/custom/CustomInstantDeserializer.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegoryRepository.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItemService.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/value/ProductValueRepository.java
+/Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/custom/BrazilianInstantSerializer.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/product/value/ProductValueService.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContactRepository.java
 /Users/matheus/workspace/Spring/semive-backend/src/main/java/br/com/matheuscastiglioni/semivebackend/domain/country/Country.java

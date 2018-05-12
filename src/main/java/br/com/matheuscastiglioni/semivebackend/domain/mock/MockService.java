@@ -7,6 +7,7 @@ import br.com.matheuscastiglioni.semivebackend.domain.order.Order;
 import br.com.matheuscastiglioni.semivebackend.domain.order.OrderRepository;
 import br.com.matheuscastiglioni.semivebackend.domain.order.item.OrderItem;
 import br.com.matheuscastiglioni.semivebackend.domain.order.item.OrderItemRepository;
+import br.com.matheuscastiglioni.semivebackend.domain.order.value.OrderValue;
 import br.com.matheuscastiglioni.semivebackend.domain.order.value.OrderValueRepository;
 import br.com.matheuscastiglioni.semivebackend.domain.person.Person;
 import br.com.matheuscastiglioni.semivebackend.domain.person.PersonRepository;
@@ -23,8 +24,12 @@ import br.com.matheuscastiglioni.semivebackend.domain.product.Product;
 import br.com.matheuscastiglioni.semivebackend.domain.product.ProductRepository;
 import br.com.matheuscastiglioni.semivebackend.domain.product.cattegory.ProductCattegory;
 import br.com.matheuscastiglioni.semivebackend.domain.product.cattegory.ProductCattegoryRepository;
+import br.com.matheuscastiglioni.semivebackend.domain.product.stock.ProductStock;
+import br.com.matheuscastiglioni.semivebackend.domain.product.stock.ProductStockRepository;
 import br.com.matheuscastiglioni.semivebackend.domain.product.type.ProductType;
 import br.com.matheuscastiglioni.semivebackend.domain.product.type.ProductTypeRepository;
+import br.com.matheuscastiglioni.semivebackend.domain.product.value.ProductValue;
+import br.com.matheuscastiglioni.semivebackend.domain.product.value.ProductValueRepository;
 import br.com.matheuscastiglioni.semivebackend.domain.unity.Unity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -48,9 +53,11 @@ public class MockService {
     private final ProductCattegoryRepository productCattegoryRepository;
     private final ProductTypeRepository productTypeRepository;
     private final ProductRepository productRepository;
+    private final ProductStockRepository productStockRepository;
+    private final ProductValueRepository productValueRepository;
 
     @Autowired
-    public MockService(OrderValueRepository orderValueRepository, OrderItemRepository orderItemRepository, OrderRepository orderRepository, PersonRepository personRepository, PersonAddressRepository personAddressRepository, PersonContactRepository personContactRepository, PersonDefinitionRepository personDefinitionRepository, PersonDocumentRepository personDocumentRepository, ProductCattegoryRepository productCattegoryRepository, ProductTypeRepository productTypeRepository, ProductRepository productRepository) {
+    public MockService(OrderValueRepository orderValueRepository, OrderItemRepository orderItemRepository, OrderRepository orderRepository, PersonRepository personRepository, PersonAddressRepository personAddressRepository, PersonContactRepository personContactRepository, PersonDefinitionRepository personDefinitionRepository, PersonDocumentRepository personDocumentRepository, ProductCattegoryRepository productCattegoryRepository, ProductTypeRepository productTypeRepository, ProductRepository productRepository, ProductStockRepository productStockRepository, br.com.matheuscastiglioni.semivebackend.domain.product.value.ProductValueRepository productValueRepository) {
         this.orderValueRepository = orderValueRepository;
         this.orderItemRepository = orderItemRepository;
         this.orderRepository = orderRepository;
@@ -62,6 +69,8 @@ public class MockService {
         this.productCattegoryRepository = productCattegoryRepository;
         this.productTypeRepository = productTypeRepository;
         this.productRepository = productRepository;
+        this.productStockRepository = productStockRepository;
+        this.productValueRepository = productValueRepository;
     }
 
     public String delete() {
@@ -75,6 +84,8 @@ public class MockService {
         this.personAddressRepository.deleteAll();
         this.personRepository.deleteAll();
 
+        this.productValueRepository.deleteAll();
+        this.productStockRepository.deleteAll();
         this.productRepository.deleteAll();
         this.productTypeRepository.deleteAll();
         this.productCattegoryRepository.deleteAll();
@@ -124,6 +135,14 @@ public class MockService {
         Product pr2 = this.productRepository.save(new Product(t2, new Unity(2), "Testando Dois", "Teste Dois"));
         Product pr3 = this.productRepository.save(new Product(t3, new Unity(3), "Testando Tres", "Teste Tres"));
 
+        this.productStockRepository.save(new ProductStock(pr1));
+        this.productStockRepository.save(new ProductStock(pr2));
+        this.productStockRepository.save(new ProductStock(pr3));
+
+        this.productValueRepository.save(new ProductValue(pr1));
+        this.productValueRepository.save(new ProductValue(pr2));
+        this.productValueRepository.save(new ProductValue(pr3));
+
         Order o1 = this.orderRepository.save(new Order(p1, Instant.now()));
         Order o2 = this.orderRepository.save(new Order(p2, Instant.now()));
         Order o3 = this.orderRepository.save(new Order(p3, Instant.now()));
@@ -131,6 +150,10 @@ public class MockService {
         this.orderItemRepository.save(new OrderItem(o1, pr1, new BigDecimal(10)));
         this.orderItemRepository.save(new OrderItem(o2, pr2, new BigDecimal(20)));
         this.orderItemRepository.save(new OrderItem(o3, pr3, new BigDecimal(30)));
+
+        this.orderValueRepository.save(new OrderValue(o1));
+        this.orderValueRepository.save(new OrderValue(o2));
+        this.orderValueRepository.save(new OrderValue(o3));
 
         return "Database has been mocked";
     }

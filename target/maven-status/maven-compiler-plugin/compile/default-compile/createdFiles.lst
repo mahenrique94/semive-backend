@@ -20,6 +20,7 @@ br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocumentRep
 br/com/matheuscastiglioni/semivebackend/generic/CRUDService.class
 br/com/matheuscastiglioni/semivebackend/domain/country/CountryService.class
 br/com/matheuscastiglioni/semivebackend/domain/unity/UnityRepository.class
+br/com/matheuscastiglioni/semivebackend/config/CORSConfiguration$1.class
 br/com/matheuscastiglioni/semivebackend/domain/unity/UnityController.class
 br/com/matheuscastiglioni/semivebackend/domain/person/document/PersonDocument.class
 br/com/matheuscastiglioni/semivebackend/SemiveBackendApplication.class
@@ -27,6 +28,7 @@ br/com/matheuscastiglioni/semivebackend/domain/product/type/ProductTypeService.c
 br/com/matheuscastiglioni/semivebackend/domain/order/item/OrderItemRepository.class
 br/com/matheuscastiglioni/semivebackend/domain/city/City.class
 br/com/matheuscastiglioni/semivebackend/domain/country/CountryRepository.class
+br/com/matheuscastiglioni/semivebackend/custom/BrazilianInstantSerializer.class
 br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegory.class
 br/com/matheuscastiglioni/semivebackend/domain/product/Product.class
 br/com/matheuscastiglioni/semivebackend/domain/state/StateRepository.class
@@ -40,7 +42,6 @@ br/com/matheuscastiglioni/semivebackend/domain/person/contact/PersonContactContr
 br/com/matheuscastiglioni/semivebackend/domain/product/ProductRepository.class
 br/com/matheuscastiglioni/semivebackend/domain/order/OrderRepository.class
 br/com/matheuscastiglioni/semivebackend/domain/document/type/DocumentType.class
-br/com/matheuscastiglioni/semivebackend/custom/CustomInstantDeserializer.class
 br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroupRepository.class
 br/com/matheuscastiglioni/semivebackend/domain/person/PersonController.class
 br/com/matheuscastiglioni/semivebackend/domain/person/group/PersonGroupController.class
@@ -54,7 +55,9 @@ br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegor
 br/com/matheuscastiglioni/semivebackend/domain/product/cattegory/ProductCattegoryRepository.class
 br/com/matheuscastiglioni/semivebackend/domain/product/value/ProductValueService.class
 br/com/matheuscastiglioni/semivebackend/domain/product/stock/ProductStockController.class
+br/com/matheuscastiglioni/semivebackend/custom/BrazilianInstantDeserializer.class
 br/com/matheuscastiglioni/semivebackend/domain/address/type/AddressTypeService.class
+br/com/matheuscastiglioni/semivebackend/config/CORSConfiguration.class
 br/com/matheuscastiglioni/semivebackend/domain/order/OrderService.class
 br/com/matheuscastiglioni/semivebackend/domain/state/State.class
 br/com/matheuscastiglioni/semivebackend/domain/state/StateController.class
